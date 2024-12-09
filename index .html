@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDM CARS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Oxanium:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script> <!-- Adicionado defer para garantir que o DOM esteja carregado -->
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="index .html">HOME</a></li>
+                <li><a href="cars.html">CARS</a></li>
+                <li><a href="#footer">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container" id="container">
+
+        <div class="list">
+
+            <div class="item active">
+                <div class="car-img">
+                    <img src="/img/Mazda RX-7.png" alt="Mazda RX-7">
+                </div>
+                <div class="content">
+                    <p class="car-information">JDM CAR</p>
+                    <h2>Mazda RX-7</h2>
+                    <p class="description">
+                        O Mazda RX-7 é um carro esportivo icônico, produzido em várias gerações entre 1978 e 2002.
+                        Conhecido por seu motor rotativo Wankel, o RX-7 oferece uma experiência de condução única e
+                        empolgante.
+                    </p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="/img/GT-R34.png" alt="Nissan GT-R R34">
+                </div>
+                <div class="content">
+                    <p class="car-information">JDM CAR</p>
+                    <h2>Nissan GT-R R34</h2>
+                    <p class="description">
+                        O Nissan GT-R R34, produzido entre 1999 e 2002, é um dos carros esportivos mais emblemáticos da
+                        Nissan e um verdadeiro ícone na cultura automotiva, especialmente entre os fãs de tuning e
+                        corridas.
+                    </p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="/img/SUPRA.png" alt="Toyota Supra A80">
+                </div>
+                <div class="content">
+                    <p class="car-information">JDM CAR</p>
+                    <h2>Toyota Supra A80</h2>
+                    <p class="description">
+                        O Toyota Supra A80, produzido entre 1993 e 2002, é um ícone entre os carros esportivos.
+                        Conhecido por seu design aerodinâmico e agressivo, o A80 apresenta linhas elegantes e uma
+                        dianteira marcante.
+                    </p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="setas">
+            <button id="prev"><img src="img/arrow.png" alt="seta left"></button>
+            <button id="next"><img src="img/arrow.png" alt="seta right"></button>
+        </div>
+
+        <div class="indicators">
+            <div class="number">
+                01
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <main>
+        <h2 id="destaque">DESTAQUE</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="img/supra black.png" alt="Toyota Supra" class="car-image">
+                <div class="badge">Novo</div>
+                <div class="car-info">
+                    <h3>Toyota Supra</h3>
+                    <p>3.0 Turbo 6 Cilindros Gasolina <br> Automático</p>
+                    <div class="price">
+                        <span>R$ 399.900</span>
+                    </div>
+                    <div class="details">
+                        <span>2022/2023</span>
+                        <span>10.500 Km</span>
+                    </div>
+                    <div class="location">
+                        <span>São Paulo - SP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="img/Nissan_GTR.jpg" alt="Nissan GT-R" class="car-image">
+                <div class="badge">Blindado</div>
+                <div class="car-info">
+                    <h3>Nissan GT-R</h3>
+                    <p>3.8 V6 Bi-Turbo Gasolina 570 cv Automático</p>
+                    <div class="price">
+                        <span>R$ 1.299.000</span>
+                    </div>
+                    <div class="details">
+                        <span>2020/2021</span>
+                        <span>5.200 Km</span>
+                    </div>
+                    <div class="location">
+                        <span>Rio de Janeiro - RJ</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="img/type R.png" alt="Honda Civic Type R" class="car-image">
+                <div class="badge">Usado</div>
+                <div class="car-info">
+                    <h3>Honda Civic Type R</h3>
+                    <p>2.0 Turbo 4 Cilindros Gasolina <br> Manual </p>
+                    <div class="price">
+                        <span>R$ 229.900</span>
+                    </div>
+                    <div class="details">
+                        <span>2019/2020</span>
+                        <span>22.500 Km</span>
+                    </div>
+                    <div class="location">
+                        <span>Curitiba - PR</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="img/WRX.jpg" alt="Subaru WRX" class="car-image">
+                <div class="badge">Usado</div>
+                <div class="car-info">
+                    <h3>Subaru WRX</h3>
+                    <p>2.0 Turbo 4 Cilindros Gasolina AWD Manual</p>
+                    <div class="price">
+                        <span>R$ 289.900</span>
+                    </div>
+                    <div class="details">
+                        <span>2018/2019</span>
+                        <span>35.000 Km</span>
+                    </div>
+                    <div class="location">
+                        <span>Belo Horizonte - MG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>All rights reserved &copy; JDM CARS 2024</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:seuemail@exemplo.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/seu_usuario" target="blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>

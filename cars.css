@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background:radial-gradient(rgb(105, 7, 7), rgb(0, 0, 0));
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+nav a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: aliceblue; /* Certifique-se de que a cor dos links esteja visível */
+}
+
+nav a:hover {
+    color: rgb(136, 10, 10); /* Cor ao passar o mouse, se desejar */
+}
+header {
+    position: static; /* Mantenha como está */
+    width: 90%;
+    background-color: transparent; /* Mantive como está */
+    display: grid;
+    grid-template-columns: 1fr 550px;
+    gap: 18%;
+    align-items: center;
+    z-index: 2;
+    list-style-type: none;
+    margin-top: 5px;
+
+    & img {
+        margin-left: 160px; /* Adicionei margin-left para mover o logo para a direita */
+        width: 220px;
+    }
+
+    & nav {
+        & ul {
+            margin-right:350px; /* Removi o margin-right para evitar desalinhamento */
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            gap: 15%;
+        }
+
+        & li {
+            
+            margin-top: 15PX;
+            height: 45px;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            list-style-type: none;
+            
+            &:hover {
+                color: rgb(136, 10, 10);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+.card-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.badge{
+
+    text-align: center;
+    background-color: rgb(185, 185, 6);
+
+}
+
+/* Card styles */
+.card {
+    margin-top: 50px;
+    width: 300px;
+    margin: 10px;
+    background-color: #afafaf;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(7, 7, 7, 0.5);
+    overflow: hidden;
+    transition: box-shadow 0.8s ease;
+    transform: translateY(0);
+    transform-origin: top;
+    transform-style: preserve-3d;
+    margin-bottom: -10px;
+
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(7, 7, 7, 0.8);
+    transition: box-shadow 0.6s ease;
+
+    transform: translateY(-10px);
+    transform-origin: top;
+    transform-style: preserve-3d;
+
+
+}
+.parcel-button {
+    display: block; /* Faz o botão ocupar toda a largura */
+    margin-top: 10px; /* Espaçamento acima do botão */
+    padding: 10px; /* Padding para o botão */
+    background-color: #252323; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Mão ao passar o mouse */
+}
+
+.parcel-button:hover {
+    background-color: #880a0a; /* Cor do botão ao passar o mouse */
+}
+
+
+/* Car image styles */
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Car info styles */
+.car-info {
+    padding: 15px;
+}
+
+/* Car title styles */
+.car-info h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/* Car description styles */
+.car-info p {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Price styles */
+.car-info .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #af0606;
+    text-shadow: 1px px 0 #000000; /* Sombra preta, sem desfoque */
+
+}
+/* footer styles */
+#footer {
+    margin-top: 100px;
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    position: relative; /* Pode ser útil para controle de posicionamento */
+    bottom: 0; /* Fica fixo na parte inferior da página */
+    width: 100%; /* Ocupa toda a largura da página */
+}
+
+.social-links {
+    margin-top: 10px; /* Espaçamento acima dos ícones */
+}
+
+.social-links a {
+    color: #fff; /* Cor dos ícones */
+    margin: 0 10px; /* Espaçamento horizontal entre os ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.social-links a:hover {
+    color: rgb(136, 10, 10); /* Cor ao passar o mouse */
+}
+
+html {
+    scroll-behavior: smooth; /* Adiciona scroll suave */
+}

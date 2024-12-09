@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "OXANIUM", sans-serif;
+    scroll-behavior: auto;
+}
+
+body {
+    background-color: black;
+    color: aliceblue;
+    font-size: 16px;
+    
+}
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: aliceblue; /* Certifique-se de que a cor dos links esteja visível */
+}
+
+nav a:hover {
+    color: rgb(136, 10, 10); /* Cor ao passar o mouse, se desejar */
+}
+header {
+    
+    position: fixed;
+    width: 80vw;
+    left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    gap: 10%;
+    align-items: center;
+    z-index: 2;
+    list-style-type: none;
+
+    & img {
+
+        width: 220px;
+
+    }
+
+    & nav  {
+        
+
+        & ul {
+
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+        }
+
+        & li  {
+            height: 45px;
+            width: 100%; /* Faz o <li> ocupar 100% da largura de seu contêiner */
+            padding: 10px;
+            text-align: center; /* Centraliza o texto dentro do <li> */
+            transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+            list-style-type: none;
+            
+            &:hover {
+                color: rgb(136, 10, 10); /* Muda a cor de fundo no hover */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+        
+        }
+
+    }
+
+}
+
+section {
+
+    background-image: radial-gradient(rgb(119, 23, 23), black);
+    height: 100vh;
+    position: relative;
+
+    & .list {
+        width: 70vh;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+        & .item {
+
+            position: absolute;
+            inset: 0;
+
+
+            & .car-img {
+
+                position: absolute;
+                top: 55%;
+                transform: translateY(-60%);
+                width: 90%;
+                left: -250px;
+
+
+
+                & img {
+
+                    height: 500px;
+                    width: 900px;
+                    transform: rotate(-20deg);
+                    align-items: left;
+                    justify-content: left;
+
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: #000000; /* Cor preta */
+                    width: 130%;
+                    height: 100px;
+                    top: 100%;
+                    left: 50px;
+                    border: 50%;
+                    filter: blur(50px);
+                }
+                
+
+            }
+
+            & .content {
+                top: -340px;
+                position: absolute;
+                margin-left: 470px;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: end;
+                gap: 20px;
+
+
+            }
+
+            & .car-information {
+
+                font-weight: bold;
+
+            }
+
+            & h2 {
+                top: 10px;
+                font-size: 4.2em;
+                font-family: "League Gothic", sans-serif;
+            }
+
+            & .description {
+
+                color: rgb(153, 155, 156);
+                font-size: 15px;
+                text-align: right;
+                max-width: 400px;
+
+            }
+
+            & .information {
+
+                border-radius: 30px;
+                height: 35px;
+                width: 120px;
+                text-transform: uppercase;
+                border: 2 px solid red;
+                background-color: brown;
+                color: aliceblue;
+                cursor: pointer;
+                font-weight: bold;
+                cursor: pointer;
+
+            }
+
+        }
+
+        &::before {
+
+            content: '';
+            position: absolute;
+            height: 100px;
+            width: 1300px;
+            margin-left: -310px;
+            top: 47%;
+            border-top: 1px solid white;
+
+        }
+
+    }
+
+    .indicators {
+
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        height: 200px;
+        transform: translateX(-50%);
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 10px;
+    }
+
+    & .number {
+        font-size: 5em;
+        font-family: "League Gothic", sans-serif;
+    }
+
+
+    & ul {
+
+        display: flex;
+        gap: 10px;
+
+    }
+
+    & li {
+
+        width: 50px;
+        height: 5px;
+        background-color: rgb(105, 7, 7);
+        border-radius: 8px;
+        transition: 0.5s;
+    }
+
+    & .active {
+
+        background-color: transparent;
+        
+
+
+    }
+
+
+}
+
+.setas {
+
+    width: 70vw;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: translate(-50%, );
+    display: flex;
+    justify-content: space-between;
+
+    & button:nth-child(1) {
+
+        & img {
+
+            transform: scale(-1);
+
+        }
+
+
+    }
+
+    & button {
+
+        top: 60%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+
+        & img {
+
+            width: 10px;
+            margin-top: 4pxs;
+
+        }
+
+        &:hover {
+
+            background-color: rgb(122, 17, 17);
+
+        }
+    }
+
+
+}
+
+section {
+
+    & .list {
+
+        & .item {
+
+            transform: translateX(100vw);
+            transition: 0.5s;
+            opacity: 0;
+
+            & .car-img {
+
+
+
+                & img {
+
+                    transform: rotate(0);
+                    transition: 0.5s;
+                    transition-delay: 0.3s;
+
+                }
+
+            }
+
+            & .content {
+
+                & .car-information,
+                h2,
+                .description,
+                .information {
+
+                    transform: translateX(200px);
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+
+                }
+
+                & h2 {
+
+                    transition-delay: 0.5s;
+
+                }
+
+                & .descriptions {
+
+                    transition-delay: 0.7s;
+
+                }
+
+                & .information {
+
+                    transition-delay: 0.5s;
+                    cursor: pointer;
+
+                }
+
+            }
+
+        }
+
+
+        & .active {
+
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+            & .car-img {
+
+
+                & img {
+
+                    transform: rotate(-20deg);
+
+                }
+
+            }
+
+            & .content {
+
+                & .car-information,
+                h2,
+                .description,
+                .information {
+
+                    transform: translateX(0);
+
+                }
+            }
+
+        }
+
+    }
+}
+
+/* General styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #270202;
+}
+
+#destaque {
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0;
+    color: #ffffff;
+    
+}
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.badge{
+
+    text-align: center;
+    background-color: rgb(185, 185, 6);
+
+}
+
+/* Card styles */
+.card {
+    width: 300px;
+    margin: 10px;
+    background-color: #353030;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(7, 7, 7, 0.5);
+    overflow: hidden;
+    transition: box-shadow 0.8s ease;
+    transform: translateY(0);
+    transform-origin: top;
+    transform-style: preserve-3d;
+    margin-bottom: 100px;
+
+}
+.card:hover{
+    cursor: pointer;
+
+    box-shadow: 0px 10px 10px rgba(7, 7, 7, 0.8);
+    transition: box-shadow 0.6s ease;
+
+    transform: translateY(-10px);
+    transform-origin: top;
+    transform-style: preserve-3d;
+
+
+}
+
+/* Car image styles */
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Car info styles */
+.car-info {
+    padding: 15px;
+}
+
+/* Car title styles */
+.car-info h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/* Car description styles */
+.car-info p {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Price styles */
+.car-info .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #af0606;
+    text-shadow: 1px px 0 #000000; /* Sombra preta, sem desfoque */
+
+}
+/* footer styles */
+#footer {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    position: relative; /* Pode ser útil para controle de posicionamento */
+    bottom: 0; /* Fica fixo na parte inferior da página */
+    width: 100%; /* Ocupa toda a largura da página */
+}
+
+.social-links {
+    margin-top: 10px; /* Espaçamento acima dos ícones */
+}
+
+.social-links a {
+    color: #fff; /* Cor dos ícones */
+    margin: 0 10px; /* Espaçamento horizontal entre os ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.social-links a:hover {
+    color: rgb(136, 10, 10); /* Cor ao passar o mouse */
+}
+
+html {
+    scroll-behavior: smooth; /* Adiciona scroll suave */
+}
